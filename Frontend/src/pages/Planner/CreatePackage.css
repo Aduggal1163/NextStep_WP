@@ -1,0 +1,11 @@
+/* Reuse Reviews.css styles */
+.reviews-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviews-page h1 {
+  color: white;
+  margin-bottom: 30px;
+}
+

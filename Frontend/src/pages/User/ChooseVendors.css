@@ -1,0 +1,66 @@
+.choose-vendors {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.choose-vendors h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: white;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.vendors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.vendor-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vendor-card h3 {
+  color: #667eea;
+  margin-bottom: 12px;
+}
+
+.vendor-card p {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.services-list {
+  margin: 16px 0;
+}
+
+.services-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.services-list li {
+  padding: 4px 0;
+  color: #666;
+}
+
+.selected-vendors {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.selected-vendors h2 {
+  color: #333;
+  margin-bottom: 8px;
+}
+
