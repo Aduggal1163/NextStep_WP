@@ -5,10 +5,11 @@ dotenv.config();
 
 const dbconnect=async()=>{
     try {
-        await mongoose.connect(process.env.MONGO_URI);
-            console.log("MongoDB connect")
+        await mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI);
+            console.log("MongoDB connected successfully!")
     } catch (error) {
-            console.log(error.message," Mongo Error")
+            console.error("MongoDB connection error:", error.message);
+            process.exit(1);
     }
 }
 export default dbconnect
