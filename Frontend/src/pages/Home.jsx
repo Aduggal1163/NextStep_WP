@@ -3,191 +3,174 @@ import React, { useState } from 'react';
 const Home = () => {
   const [user, setUser] = useState(null);
 
-  const styles = {
-    container: {
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #fff1f2 0%, #ffffff 50%, #faf5ff 100%)',
-    },
-    hero: {
-      position: 'relative',
-      overflow: 'hidden',
-      padding: '80px 20px 120px',
-    },
-    heroOverlay: {
-      position: 'absolute',
-      inset: 0,
-      background: 'linear-gradient(to right, rgba(225, 29, 72, 0.1), rgba(147, 51, 234, 0.1))',
-    },
-    heroContent: {
-      position: 'relative',
-      maxWidth: '1280px',
-      margin: '0 auto',
-      textAlign: 'center',
-    },
-    heroTitle: {
-      fontSize: 'clamp(2.5rem, 8vw, 5rem)',
-      fontWeight: 'bold',
-      background: 'linear-gradient(to right, #e11d48, #9333ea)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      backgroundClip: 'text',
-      marginBottom: '24px',
-      lineHeight: '1.2',
-    },
-    heroSubtitle: {
-      fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
-      color: '#4b5563',
-      marginBottom: '48px',
-      maxWidth: '900px',
-      margin: '0 auto 48px',
-      lineHeight: '1.6',
-    },
-    buttonContainer: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '16px',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    buttonPrimary: {
-      padding: '16px 32px',
-      background: 'linear-gradient(to right, #e11d48, #9333ea)',
-      color: 'white',
-      border: 'none',
-      borderRadius: '50px',
-      fontWeight: '600',
-      fontSize: '1.125rem',
-      cursor: 'pointer',
-      width: '256px',
-      boxShadow: '0 10px 25px rgba(225, 29, 72, 0.3)',
-      transition: 'all 0.3s ease',
-    },
-    buttonSecondary: {
-      padding: '16px 32px',
-      background: 'white',
-      color: '#e11d48',
-      border: '2px solid #e11d48',
-      borderRadius: '50px',
-      fontWeight: '600',
-      fontSize: '1.125rem',
-      cursor: 'pointer',
-      width: '256px',
-      boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
-      transition: 'all 0.3s ease',
-    },
-    decorativeBlob1: {
-      position: 'absolute',
-      top: '80px',
-      left: '40px',
-      width: '80px',
-      height: '80px',
-      background: '#fecdd3',
-      borderRadius: '50%',
-      filter: 'blur(60px)',
-      opacity: 0.5,
-    },
-    decorativeBlob2: {
-      position: 'absolute',
-      bottom: '80px',
-      right: '40px',
-      width: '128px',
-      height: '128px',
-      background: '#e9d5ff',
-      borderRadius: '50%',
-      filter: 'blur(60px)',
-      opacity: 0.5,
-    },
-    featuresSection: {
-      maxWidth: '1280px',
-      margin: '0 auto',
-      padding: '80px 20px',
-    },
-    sectionHeader: {
-      textAlign: 'center',
-      marginBottom: '64px',
-    },
-    sectionTitle: {
-      fontSize: 'clamp(2rem, 5vw, 3rem)',
-      fontWeight: 'bold',
-      color: '#111827',
-      marginBottom: '16px',
-    },
-    titleUnderline: {
-      width: '96px',
-      height: '4px',
-      background: 'linear-gradient(to right, #e11d48, #9333ea)',
-      margin: '0 auto',
-      borderRadius: '2px',
-    },
-    grid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '32px',
-    },
-    featureCard: {
-      background: 'white',
-      borderRadius: '16px',
-      padding: '32px',
-      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
-      border: '1px solid #f3f4f6',
-      transition: 'all 0.3s ease',
-      cursor: 'pointer',
-    },
-    iconWrapper: {
-      width: '64px',
-      height: '64px',
-      borderRadius: '16px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: '2rem',
-      marginBottom: '24px',
-      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
-      transition: 'transform 0.3s ease',
-    },
-    featureTitle: {
-      fontSize: '1.5rem',
-      fontWeight: 'bold',
-      color: '#111827',
-      marginBottom: '16px',
-    },
-    featureDescription: {
-      color: '#4b5563',
-      lineHeight: '1.6',
-    },
-    ctaSection: {
-      background: 'linear-gradient(to right, #e11d48, #9333ea)',
-      padding: '80px 20px',
-      textAlign: 'center',
-    },
-    ctaContent: {
-      maxWidth: '1024px',
-      margin: '0 auto',
-    },
-    ctaTitle: {
-      fontSize: 'clamp(2rem, 5vw, 3rem)',
-      fontWeight: 'bold',
-      color: 'white',
-      marginBottom: '24px',
-    },
-    ctaSubtitle: {
-      fontSize: '1.25rem',
-      color: 'rgba(255, 255, 255, 0.9)',
-      marginBottom: '40px',
-    },
-    ctaButton: {
-      padding: '20px 40px',
-      background: 'white',
-      color: '#e11d48',
-      border: 'none',
-      borderRadius: '50px',
-      fontWeight: 'bold',
-      fontSize: '1.125rem',
-      cursor: 'pointer',
-      boxShadow: '0 15px 35px rgba(0, 0, 0, 0.2)',
-      transition: 'all 0.3s ease',
-    },
-  };
+const styles = {
+
+container:{
+minHeight:"100vh",
+background:"linear-gradient(120deg,#f8fafc 0%,#e0e7ff 50%,#f9fafb 100%)",
+fontFamily:"Inter, system-ui, sans-serif",
+color:"#111827"
+},
+
+hero:{
+padding:"140px 20px",
+background:"linear-gradient(120deg,#f8fafc 0%,#e0e7ff 50%,#f9fafb 100%)",
+fontFamily:"Inter, system-ui, sans-serif",
+color:"#111827",
+textAlign:"center"
+},
+
+heroTitle:{
+fontSize:"clamp(3rem,7vw,4.3rem)",
+fontWeight:"800",
+color:"#111827",
+marginBottom:"22px",
+letterSpacing:"-1px"
+},
+
+heroSubtitle:{
+fontSize:"1.25rem",
+color:"#6b7280",
+maxWidth:"760px",
+margin:"0 auto 45px",
+lineHeight:"1.7"
+},
+
+buttonContainer:{
+display:"flex",
+gap:"18px",
+justifyContent:"center",
+flexWrap:"wrap"
+},
+
+buttonPrimary:{
+padding:"15px 34px",
+background:"linear-gradient(135deg,#2563eb,#6366f1)",
+color:"white",
+border:"none",
+borderRadius:"10px",
+fontWeight:"600",
+cursor:"pointer",
+boxShadow:"0 10px 28px rgba(37,99,235,.25)",
+transition:"all .25s ease"
+},
+
+buttonSecondary:{
+padding:"15px 34px",
+background:"#ffffff",
+color:"#111827",
+border:"1px solid #e5e7eb",
+borderRadius:"10px",
+fontWeight:"600",
+cursor:"pointer",
+boxShadow:"0 6px 16px rgba(0,0,0,.05)",
+transition:"all .25s ease"
+},
+
+featuresSection:{
+maxWidth:"1150px",
+margin:"0 auto",
+padding:"110px 20px"
+},
+
+sectionHeader:{
+textAlign:"center",
+marginBottom:"65px"
+},
+
+sectionTitle:{
+fontSize:"2.4rem",
+fontWeight:"700",
+color:"#111827"
+},
+
+titleUnderline:{
+width:"80px",
+height:"3px",
+background:"linear-gradient(90deg,#2563eb,#6366f1)",
+margin:"16px auto 0",
+borderRadius:"2px"
+},
+
+grid:{
+display:"grid",
+gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",
+gap:"28px"
+},
+
+featureCard:{
+background:"linear-gradient(180deg,#ffffff,#f9fafb)",
+padding:"34px",
+borderRadius:"14px",
+border:"1px solid #e5e7eb",
+boxShadow:"0 8px 24px rgba(0,0,0,.06)",
+transition:"all .25s ease"
+},
+
+iconWrapper:{
+width:"60px",
+height:"60px",
+borderRadius:"12px",
+display:"flex",
+alignItems:"center",
+justifyContent:"center",
+fontSize:"1.8rem",
+marginBottom:"20px",
+background:"linear-gradient(135deg,#eef2ff,#f9fafb)",
+border:"1px solid #e5e7eb"
+},
+
+featureTitle:{
+fontSize:"1.28rem",
+fontWeight:"600",
+marginBottom:"12px",
+color:"#111827"
+},
+
+featureDescription:{
+color:"#6b7280",
+lineHeight:"1.65"
+},
+
+ctaSection:{
+background:"linear-gradient(135deg,#111827,#1f2937)",
+padding:"120px 20px",
+textAlign:"center",
+marginTop:"90px"
+},
+
+ctaContent:{
+maxWidth:"720px",
+margin:"auto"
+},
+
+ctaTitle:{
+fontSize:"2.5rem",
+fontWeight:"700",
+color:"white",
+marginBottom:"22px"
+},
+
+ctaSubtitle:{
+fontSize:"1.2rem",
+color:"#d1d5db",
+marginBottom:"42px",
+lineHeight:"1.6"
+},
+
+ctaButton:{
+padding:"17px 38px",
+background:"linear-gradient(135deg,#2563eb,#6366f1)",
+color:"white",
+border:"none",
+borderRadius:"10px",
+fontWeight:"600",
+cursor:"pointer",
+boxShadow:"0 14px 40px rgba(37,99,235,.35)",
+transition:"all .25s ease"
+}
+
+};
 
   const features = [
     {
