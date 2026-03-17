@@ -23,6 +23,8 @@ overflow:"hidden"
 
 heroTitle:{
 fontSize:"clamp(3rem,6vw,4.5rem)",
+fontFamily: "'Playfair Display', serif",
+color: "#1e293b", 
 fontWeight:"800",
 letterSpacing:"-1px",
 marginBottom:"20px"
@@ -201,7 +203,7 @@ return (
 <section style={styles.hero}>
 
 <h1 style={styles.heroTitle}>
-Plan Your Dream Wedding
+Plan Your Dream Destination Wedding
 </h1>
 
 <p style={styles.heroSubtitle}>
