@@ -33,7 +33,7 @@ return (
 <div className="nav-container">
 
 <Link to="/" className="nav-logo">
-💍 WedPlan
+💍 NextStep
 </Link>
 
 <nav className="nav-links">
