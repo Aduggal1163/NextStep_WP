@@ -31,7 +31,7 @@ const Analytics = () => {
 
   return (
     <div className="my-bookings">
-      <h1>Analytics Dashboard</h1>
+      <h1 style={{color:'black'}}>Analytics Dashboard</h1>
       <div className="analytics-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
         <div className="card">
           <h3>Bookings</h3>
