@@ -119,7 +119,7 @@ NextStep provides:
 
 ---
 
-## Author
+## Authors
 
 Abhishek Duggal
 Gauri Gupta
