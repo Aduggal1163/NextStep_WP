@@ -1,4 +1,9 @@
+# 210991163 Abhishek Duggal, copyright applied 
+# 2210991120 Aaryan Kumar Goayal, copyright applied
+# 2210991574 Gauri Gupta, copyright applied
+
 # NextStep – Smart Wedding Planning & Service Platform
+
 
 ## Problem
 
